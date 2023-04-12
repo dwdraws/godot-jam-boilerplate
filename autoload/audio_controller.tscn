@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://db8rktlaxqesv"]
+
+[ext_resource type="Script" path="res://autoload/audio_controller.gd" id="1_amtq3"]
+[ext_resource type="Resource" uid="uid://chsdv6qqve6rm" path="res://resources/audio/default_music.tres" id="2_j1j3k"]
+
+[node name="AudioController" type="Node"]
+process_mode = 3
+script = ExtResource("1_amtq3")
+music_list = Array[Resource("res://resources/audio/audio_track.gd")]([ExtResource("2_j1j3k")])
+
+[node name="MusicStreamPlayer" type="AudioStreamPlayer" parent="."]
+bus = &"music"
+
+[node name="AmbientStreamPlayer" type="AudioStreamPlayer" parent="."]
+bus = &"ambient"

@@ -1,0 +1,13 @@
+[gd_scene load_steps=5 format=3 uid="uid://bqxywusbkx0c0"]
+
+[ext_resource type="Script" path="res://scenes/root/root.gd" id="1_4ebpb"]
+[ext_resource type="PackedScene" uid="uid://dguc277i66ev3" path="res://scenes/ui/launch_bumper.tscn" id="2_embl0"]
+[ext_resource type="PackedScene" uid="uid://cycpl7j1cx6wl" path="res://scenes/ui/main_menu.tscn" id="2_hvsbc"]
+[ext_resource type="PackedScene" uid="uid://df541nubebynm" path="res://scenes/game_main/game_main.tscn" id="3_vp5s5"]
+
+[node name="Root" type="Node"]
+script = ExtResource("1_4ebpb")
+main_menu_scene = ExtResource("2_hvsbc")
+game_main_scene = ExtResource("3_vp5s5")
+
+[node name="LaunchBumper" parent="." instance=ExtResource("2_embl0")]

@@ -1,0 +1,100 @@
+[gd_scene load_steps=3 format=3 uid="uid://ccc3qvo8ro54y"]
+
+[ext_resource type="PackedScene" uid="uid://dira6n1ckdnxh" path="res://scenes/ui/button_sound.tscn" id="1_0kmu1"]
+[ext_resource type="Script" path="res://scenes/ui/settings_screen.gd" id="1_7fb2d"]
+
+[node name="SettingsScreen" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7fb2d")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 2
+color = Color(0, 0, 0, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 36
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Settings"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Label" type="Label" parent="VBoxContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Master"
+
+[node name="MasterVolumeSlider" type="HSlider" parent="VBoxContainer/VBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+max_value = 2.0
+step = 0.1
+value = 1.0
+tick_count = 21
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Label" type="Label" parent="VBoxContainer/VBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "Music"
+
+[node name="MusicVolumeSlider" type="HSlider" parent="VBoxContainer/VBoxContainer/VBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+max_value = 2.0
+step = 0.1
+value = 1.0
+tick_count = 21
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Label" type="Label" parent="VBoxContainer/VBoxContainer/VBoxContainer3"]
+layout_mode = 2
+text = "SFX"
+
+[node name="SfxVolumeSlider" type="HSlider" parent="VBoxContainer/VBoxContainer/VBoxContainer3"]
+unique_name_in_owner = true
+layout_mode = 2
+max_value = 2.0
+step = 0.1
+value = 1.0
+tick_count = 21
+
+[node name="VBoxContainer4" type="VBoxContainer" parent="VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Label" type="Label" parent="VBoxContainer/VBoxContainer/VBoxContainer4"]
+layout_mode = 2
+text = "Ambient"
+
+[node name="AmbientVolumeSlider" type="HSlider" parent="VBoxContainer/VBoxContainer/VBoxContainer4"]
+unique_name_in_owner = true
+layout_mode = 2
+max_value = 2.0
+step = 0.1
+value = 1.0
+tick_count = 21
+
+[node name="BackButton" parent="VBoxContainer" instance=ExtResource("1_0kmu1")]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Back to Main Menu"

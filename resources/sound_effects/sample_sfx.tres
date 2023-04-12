@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SoundEffect" load_steps=3 format=3 uid="uid://div4ksqlhgn11"]
+
+[ext_resource type="AudioStream" uid="uid://foy78lxbppbs" path="res://assets/sfx/sample_sfx.ogg" id="1_3rb2c"]
+[ext_resource type="Script" path="res://resources/sound_effects/sound_effect.gd" id="1_s3mxs"]
+
+[resource]
+script = ExtResource("1_s3mxs")
+id = "sample_sfx"
+base_volume = 1.0
+audio_stream = ExtResource("1_3rb2c")

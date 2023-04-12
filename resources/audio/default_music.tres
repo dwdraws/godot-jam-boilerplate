@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="AudioTrack" load_steps=3 format=3 uid="uid://chsdv6qqve6rm"]
+
+[ext_resource type="AudioStream" uid="uid://2mqpjlrmfnat" path="res://assets/music/default_music.ogg" id="1_imaos"]
+[ext_resource type="Script" path="res://resources/audio/audio_track.gd" id="1_s154u"]
+
+[resource]
+script = ExtResource("1_s154u")
+id = "default_music"
+base_volume = -16.0
+audio_stream = ExtResource("1_imaos")
