@@ -18,6 +18,8 @@ func _ready() -> void:
 	
 
 func start_main_menu() -> void:
+	AudioController.play_music_random()
+	
 	var main_menu_instance = main_menu_scene.instantiate()
 	add_child(main_menu_instance)
 	
@@ -31,4 +33,3 @@ func on_exit_game_to_menu() -> void:
 
 func on_launch_bumper_complete() -> void:
 	start_main_menu()
-	AudioController.play_music_random()
